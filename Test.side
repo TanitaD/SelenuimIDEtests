@@ -1,0 +1,147 @@
+{
+  "id": "957acb53-b48c-4416-bc16-434db25b182a",
+  "version": "2.0",
+  "name": "Test",
+  "url": "https://svyatoslav.biz/testlab/calc/",
+  "tests": [{
+    "id": "47ea436b-e949-431b-9d55-bddda53ff37f",
+    "name": "TC_01",
+    "commands": [{
+      "id": "aa52c3b8-c515-4008-a12b-1ef19debd580",
+      "comment": "",
+      "command": "echo",
+      "target": "Prepare variables",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8626f775-ce4d-4def-9a9f-c6f8c02ace06",
+      "comment": "",
+      "command": "store",
+      "target": "1",
+      "targets": [],
+      "value": "min"
+    }, {
+      "id": "093bcbe0-6bc7-47e8-a053-74a7d8fce1bd",
+      "comment": "",
+      "command": "store",
+      "target": "1000",
+      "targets": [],
+      "value": "max"
+    }, {
+      "id": "1de8f1ac-b1f0-40fe-abb3-2192a458b615",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * (${max} - ${min} + 1))+ ${min}",
+      "targets": [],
+      "value": "a"
+    }, {
+      "id": "553fde5c-1f59-44bc-ac27-0cf7a4f490bb",
+      "comment": "",
+      "command": "echo",
+      "target": "A = ${a}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "53a3cff4-ef68-44b1-a3a0-303239d3e304",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * (${max} - ${min} + 1)) + ${min}",
+      "targets": [],
+      "value": "b"
+    }, {
+      "id": "92b490c9-7a8c-4c5b-a920-aa033c6b85e6",
+      "comment": "",
+      "command": "echo",
+      "target": "B=${b}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34aa4449-b90b-4781-a8e0-3fe842c29f33",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return +${a} + +${b}",
+      "targets": [],
+      "value": "c"
+    }, {
+      "id": "612b111d-52d3-4ba8-a866-9e5eeb9afa49",
+      "comment": "",
+      "command": "echo",
+      "target": "Expected = ${c}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d3475b3-26b4-4187-b2b5-f7e876060811",
+      "comment": "",
+      "command": "echo",
+      "target": "Main logic here",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68346b28-fcfa-43c7-a0db-d6354d40e78b",
+      "comment": "",
+      "command": "open",
+      "target": "/testlab/calc/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "408eb17c-2800-4756-a2b2-0487589153d2",
+      "comment": "",
+      "command": "type",
+      "target": "name=a",
+      "targets": [],
+      "value": "${a}"
+    }, {
+      "id": "f6bb3edf-b653-4643-a430-738df5f0805c",
+      "comment": "",
+      "command": "type",
+      "target": "name=b",
+      "targets": [],
+      "value": "${b}"
+    }, {
+      "id": "23df6e50-87bd-4a5a-acc6-7b285d1eb38c",
+      "comment": "",
+      "command": "type",
+      "target": "name=f",
+      "targets": [],
+      "value": "10"
+    }, {
+      "id": "53b40976-f4b4-4732-bffc-f299dd61cfcf",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//input[@name='op'][@value='+'])",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9e0e868-01de-452c-a196-70ef532b50be",
+      "comment": "",
+      "command": "select",
+      "target": "name=next",
+      "targets": [],
+      "value": "label=Save"
+    }, {
+      "id": "0a1c9058-d1e7-484d-b0ca-a30a64c5355c",
+      "comment": "",
+      "command": "click",
+      "target": "css=input[type=\"submit\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "62851637-798f-4bd9-a77e-bd43a6e02002",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//*[contains(text(), '${a} + ${b} = ${c}')]",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c18b4a68-287c-48e0-bb49-bcd6e790bba0",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["47ea436b-e949-431b-9d55-bddda53ff37f"]
+  }],
+  "urls": ["https://svyatoslav.biz/testlab/calc/"],
+  "plugins": []
+}
